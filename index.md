@@ -5,7 +5,7 @@ Welcome to the official support page for WishLink.
 ## Contact Us
 If you are experiencing issues, have feature suggestions, or just want to say hi, please contact us.
 
-📧 **Support Email:** [asatavist@gmail.com]
+📧 **Support Email:** asatavist@gmail.com
 
 ---
 
