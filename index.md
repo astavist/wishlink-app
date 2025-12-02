@@ -10,7 +10,7 @@ If you are experiencing issues, have feature suggestions, or just want to say hi
 <br>
 
 Or email us directly:
-📧 **Support Email:** asatavist@gmail.com
+📧 **Support Email:** [asatavist@gmail.com](mailto:asatavist@gmail.com?subject=WishLink%20Support%20Request)
 
 ---
 
