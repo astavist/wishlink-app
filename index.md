@@ -3,8 +3,13 @@
 Welcome to the official support page for WishLink.
 
 ## Contact Us
-If you are experiencing issues, have feature suggestions, or just want to say hi, please contact us.
+If you are experiencing issues, have feature suggestions, or just want to say hi, please utilize the form below or contact us via email.
 
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9b99m6FqUyZxTbmEJ2h-qL_j3PrB89FJhsxPPMnV_Ie9MAQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+
+<br>
+
+Or email us directly:
 📧 **Support Email:** asatavist@gmail.com
 
 ---
