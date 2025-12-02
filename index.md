@@ -1,3 +1,5 @@
+
+
 # WishLink Support & Privacy
 
 Welcome to the official support page for WishLink.
