@@ -12,24 +12,46 @@
       --primary:#EFB652; --dark:#323232; --light:#FEFCFE;
       --card:#fafafa; --border:rgba(0,0,0,0.06); --muted:rgba(50,50,50,0.75);
     }
+
     *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--light);color:var(--dark);line-height:1.6}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background:var(--light);
+      color:var(--dark);
+      line-height:1.6;
+    }
     a{color:inherit}
 
     .container{max-width:1000px;margin:0 auto;padding:0 20px}
 
+    /* Top bar */
     .topbar-wrap{
       position:sticky;top:0;z-index:50;
       background:rgba(254,252,254,.86);
       backdrop-filter:blur(10px);
       border-bottom:1px solid var(--border);
     }
-    .topbar{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.01em}
+    .topbar{
+      max-width:1000px;margin:0 auto;padding:12px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .brand{
+      display:inline-flex;align-items:center;gap:10px;
+      text-decoration:none;font-weight:800;letter-spacing:-.01em;
+    }
     .brand img{width:28px;height:28px;border-radius:8px}
 
-    .pill-group{display:inline-flex;gap:8px;padding:6px;border-radius:999px;border:1px solid var(--border);background:#fff}
-    .pill{appearance:none;border:0;background:transparent;padding:8px 14px;border-radius:999px;font-weight:700;cursor:pointer;color:rgba(50,50,50,.75)}
+    .pill-group{
+      display:inline-flex;gap:8px;padding:6px;
+      border-radius:999px;border:1px solid var(--border);background:#fff;
+    }
+    .pill{
+      appearance:none;border:0;background:transparent;
+      padding:8px 14px;border-radius:999px;
+      font-weight:800;cursor:pointer;
+      color:rgba(50,50,50,.75);
+    }
     .pill.active{background:var(--primary);color:#000}
 
     header{text-align:center;padding:56px 20px 30px}
@@ -41,31 +63,67 @@
     .section h2{font-size:28px;margin:0 0 14px;letter-spacing:-.01em}
     .section p{max-width:820px;margin:0 0 18px;color:var(--muted)}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;min-height:84px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;margin-top:18px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+    }
     .card h3{margin:0 0 8px;font-size:16px}
     .card p,.card li{color:var(--muted);margin:0;font-size:14.5px}
     .card ul{margin:10px 0 0 18px;padding:0}
 
-    .primary-btn{display:inline-block;padding:12px 18px;border-radius:999px;background:var(--primary);color:#000;text-decoration:none;font-weight:800;border:1px solid transparent}
+    .primary-btn{
+      display:inline-block;
+      padding:12px 18px;border-radius:999px;
+      background:var(--primary);color:#000;
+      text-decoration:none;font-weight:900;border:1px solid transparent;
+    }
 
-    .form-wrap{border-radius:18px;overflow:hidden;border:1px solid var(--border);background:#fff;margin-top:18px}
+    .form-wrap{
+      border-radius:18px;overflow:hidden;
+      border:1px solid var(--border);
+      background:#fff;margin-top:18px;
+    }
     iframe{width:100%;height:820px;border:0;display:block}
+
     .note{font-size:14px;color:var(--muted);margin-top:12px}
 
-    .policy-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0 0;color:var(--muted);font-size:14px}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--border);font-weight:700;color:rgba(50,50,50,.8)}
+    .policy-meta{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+      margin:10px 0 0;color:var(--muted);font-size:14px;
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;background:#fff;
+      border:1px solid var(--border);
+      font-weight:800;color:rgba(50,50,50,.8);
+    }
 
     .divider{height:1px;background:var(--border);margin:32px 0}
-    .callout{border-radius:18px;border:1px solid var(--border);background:#fff;padding:16px;margin-top:12px}
+
+    .callout{
+      border-radius:18px;border:1px solid var(--border);
+      background:#fff;padding:16px;margin-top:12px;
+    }
     .callout strong{display:block;margin-bottom:6px}
 
     footer{text-align:center;padding:28px 20px 36px;font-size:14px;opacity:.65}
 
-    /* IMPORTANT: language visibility (works even if JS fails because html has data-ui-lang by default) */
+    /* ✅ Language switching ONLY for text nodes */
     [data-lang]{display:none}
-    html[data-ui-lang="en"] [data-lang="en"]{display:block}
-    html[data-ui-lang="tr"] [data-lang="tr"]{display:block}
+    html[data-ui-lang="tr"] [data-lang="tr"]{display:inline}
+    html[data-ui-lang="en"] [data-lang="en"]{display:inline}
+
+    /* Helpers for block-level text chunks */
+    .lang-block [data-lang]{display:none}
+    html[data-ui-lang="tr"] .lang-block [data-lang="tr"]{display:block}
+    html[data-ui-lang="en"] .lang-block [data-lang="en"]{display:block}
 
     @media (max-width:520px){
       header{padding-top:42px}
@@ -77,6 +135,8 @@
 </head>
 
 <body>
+
+  <!-- Sticky Topbar -->
   <div class="topbar-wrap">
     <div class="topbar">
       <a class="brand" href="index.html">
@@ -94,19 +154,355 @@
   <header>
     <img src="assets/logo.png" alt="WishLink logo" onerror="this.style.display='none'"/>
 
-    <h1 data-lang="en">Support & Privacy</h1>
-    <h1 data-lang="tr">Destek & Gizlilik</h1>
+    <h1 class="lang-block">
+      <span data-lang="en">Support & Privacy</span>
+      <span data-lang="tr">Destek & Gizlilik</span>
+    </h1>
 
-    <p data-lang="en">
-      Need help, have a suggestion, or want to request account deletion?
-      Contact us below. Privacy Policy & User Content Guidelines are also on this page.
-    </p>
-    <p data-lang="tr">
-      Yardıma mı ihtiyacın var, önerin mi var ya da hesap silme talebi mi oluşturmak istiyorsun?
-      Aşağıdan bize ulaşabilirsin. Gizlilik Politikası ve Kullanıcı İçeriği Kuralları da bu sayfada.
+    <p class="lang-block">
+      <span data-lang="en">
+        Need help, have a suggestion, or want to request account deletion?
+        Contact us below. Privacy Policy & User Content Guidelines are also on this page.
+      </span>
+      <span data-lang="tr">
+        Yardıma mı ihtiyacın var, önerin mi var ya da hesap silme talebi mi oluşturmak istiyorsun?
+        Aşağıdan bize ulaşabilirsin. Gizlilik Politikası ve Kullanıcı İçeriği Kuralları da bu sayfada.
+      </span>
     </p>
   </header>
 
   <main class="container">
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
+      <h2 class="lang-block">
+        <span data-lang="en">Contact</span>
+        <span data-lang="tr">İletişim</span>
+      </h2>
+
+      <p class="lang-block">
+        <span data-lang="en">
+          If you are experiencing issues, have feature suggestions, or want to request account deletion,
+          please use the form below or email us.
+        </span>
+        <span data-lang="tr">
+          Bir sorun yaşıyorsanız, özellik öneriniz varsa veya hesap silme talebi oluşturmak istiyorsanız
+          aşağıdaki formu kullanabilir ya da e-posta gönderebilirsiniz.
+        </span>
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">Common Requests</span>
+            <span data-lang="tr">Sık Talepler</span>
+          </h3>
+
+          <ul class="lang-block">
+            <span data-lang="en">
+              <li>Bug / crash reports</li>
+              <li>Feature suggestions</li>
+              <li>Account deletion requests</li>
+              <li>Privacy questions</li>
+            </span>
+
+            <span data-lang="tr">
+              <li>Hata / çökme bildirimleri</li>
+              <li>Özellik önerileri</li>
+              <li>Hesap silme talepleri</li>
+              <li>Gizlilik soruları</li>
+            </span>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">Support Email</span>
+            <span data-lang="tr">Destek E-postası</span>
+          </h3>
+
+          <p style="margin-bottom:10px;">
+            📧 <strong style="font-weight:900;color:var(--dark)">asatavist@gmail.com</strong>
+          </p>
+
+          <a class="primary-btn" href="mailto:asatavist@gmail.com?subject=WishLink%20Support%20Request">
+            <span data-lang="en">Email Support</span>
+            <span data-lang="tr">E-posta Gönder</span>
+          </a>
+
+          <p class="note lang-block">
+            <span data-lang="en">We usually reply within 24–72 hours.</span>
+            <span data-lang="tr">Genellikle 24–72 saat içinde dönüş yaparız.</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">Account Deletion</span>
+            <span data-lang="tr">Hesap Silme</span>
+          </h3>
+
+          <p class="lang-block">
+            <span data-lang="en">
+              You can delete your account from in-app settings. If you can’t access the app, email us and include
+              the email/username you used in WishLink.
+            </span>
+            <span data-lang="tr">
+              Hesabınızı uygulama ayarlarından silebilirsiniz. Uygulamaya erişemiyorsanız, bize e-posta atın ve
+              WishLink’te kullandığınız e-posta/kullanıcı adını ekleyin.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ✅ iframe never hidden -->
+      <div class="form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd9b99m6FqUyZxTbmEJ2h-qL_j3PrB89FJhsxPPMnV_Ie9MAQ/viewform?embedded=true"
+          loading="lazy"
+          title="WishLink Support Form"
+        >Loading…</iframe>
+      </div>
+
+      <p class="note lang-block">
+        <span data-lang="en">Tip: If the form doesn’t load, please use the email button above.</span>
+        <span data-lang="tr">İpucu: Form yüklenmezse yukarıdaki e-posta butonunu kullanın.</span>
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PRIVACY (Both languages in same layout; only text switches) -->
+    <section id="privacy" class="section">
+      <h2 class="lang-block">
+        <span data-lang="en">Privacy Policy & User Content Guidelines</span>
+        <span data-lang="tr">Gizlilik Politikası & Kullanıcı İçeriği Kuralları</span>
+      </h2>
+
+      <div class="policy-meta">
+        <span class="badge lang-block">
+          <span data-lang="en">Last updated: December 02, 2025</span>
+          <span data-lang="tr">Son güncelleme: 02 Aralık 2025</span>
+        </span>
+
+        <a class="primary-btn" href="#contact">
+          <span data-lang="en">Need Support?</span>
+          <span data-lang="tr">Destek?</span>
+        </a>
+      </div>
+
+      <div class="grid" style="margin-top:16px;">
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">1) Introduction</span>
+            <span data-lang="tr">1) Giriş</span>
+          </h3>
+          <p class="lang-block">
+            <span data-lang="en">We respect your privacy. WishLink is designed to provide a smart and social gifting experience. We do not sell your personal data.</span>
+            <span data-lang="tr">Gizliliğinize önem veriyoruz. WishLink, hediyeleşmeyi daha akıllı ve sosyal hale getirmek için tasarlanmıştır. Kişisel verilerinizi üçüncü taraflara satmayız.</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">2) Data We Collect (Summary)</span>
+            <span data-lang="tr">2) Toplanan Veriler (Özet)</span>
+          </h3>
+
+          <ul class="lang-block">
+            <span data-lang="en">
+              <li><strong>Account data:</strong> email (if provided), username, profile photo</li>
+              <li><strong>User content:</strong> wish list items, links, prices (if entered), posts, comments, likes/pins</li>
+              <li><strong>Social connections:</strong> friend requests, friend list and interactions</li>
+              <li><strong>Diagnostics & security:</strong> crash logs, basic usage/diagnostic data</li>
+            </span>
+            <span data-lang="tr">
+              <li><strong>Hesap bilgileri:</strong> e-posta (varsa), kullanıcı adı, profil fotoğrafı</li>
+              <li><strong>Kullanıcı içeriği:</strong> istek listesi öğeleri, bağlantılar, fiyat (girildiyse), paylaşımlar, yorumlar, beğeniler/pinler</li>
+              <li><strong>Sosyal bağlantılar:</strong> arkadaşlık istekleri, arkadaş listesi ve etkileşimler</li>
+              <li><strong>Tanılama & güvenlik:</strong> çökme kayıtları, temel kullanım/tanılama verileri</li>
+            </span>
+          </ul>
+
+          <div class="callout">
+            <strong class="lang-block">
+              <span data-lang="en">Tracking</span>
+              <span data-lang="tr">Takip (Tracking)</span>
+            </strong>
+            <p class="lang-block" style="margin:0;color:var(--muted);font-size:14.5px;">
+              <span data-lang="en">
+                WishLink may show ads using third-party advertising partners (e.g., Google AdMob). If you allow tracking (ATT), ads may be personalized.
+                If you do not allow, you may still see ads.
+              </span>
+              <span data-lang="tr">
+                WishLink, reklam göstermek için üçüncü taraf reklam iş ortaklarını (ör. Google AdMob) kullanabilir. Takip izni (ATT) verirseniz reklamlar kişiselleştirilebilir.
+                İzin vermezseniz de reklam görebilirsiniz.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">3) Permissions</span>
+            <span data-lang="tr">3) İzinler</span>
+          </h3>
+          <ul class="lang-block">
+            <span data-lang="en">
+              <li><strong>Photo Library:</strong> only when you upload a profile picture or add images.</li>
+              <li><strong>Camera:</strong> to take photos inside the app when adding content.</li>
+              <li><strong>Notifications:</strong> for friend requests, updates, and account activity.</li>
+            </span>
+            <span data-lang="tr">
+              <li><strong>Fotoğraf arşivi:</strong> yalnızca profil fotoğrafı yüklediğinizde veya görsel eklediğinizde.</li>
+              <li><strong>Kamera:</strong> uygulama içinden içerik eklerken fotoğraf çekmek için.</li>
+              <li><strong>Bildirimler:</strong> arkadaşlık istekleri, güncellemeler ve hesap hareketleri için.</li>
+            </span>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">4) Third-Party Services</span>
+            <span data-lang="tr">4) Üçüncü Taraf Hizmetleri</span>
+          </h3>
+          <ul class="lang-block">
+            <span data-lang="en">
+              <li><strong>Firebase (Google):</strong> authentication and database/storage services.</li>
+            </span>
+            <span data-lang="tr">
+              <li><strong>Firebase (Google):</strong> kimlik doğrulama ve veritabanı/depolama hizmetleri.</li>
+            </span>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">5) User Generated Content (UGC) Policy</span>
+            <span data-lang="tr">5) Kullanıcı İçeriği (UGC) Kuralları</span>
+          </h3>
+          <ul class="lang-block">
+            <span data-lang="en">
+              <li><strong>Zero tolerance for objectionable content:</strong> hate, harassment, CSAM, pornography, threats/violence, discrimination, illegal content, etc.</li>
+              <li><strong>Reporting & blocking:</strong> users can report and block within the app.</li>
+              <li><strong>Moderation:</strong> typically within <strong>24 hours</strong>.</li>
+              <li>We may remove content and restrict/ban accounts that violate these rules.</li>
+            </span>
+            <span data-lang="tr">
+              <li><strong>Sakıncalı içeriklere sıfır tolerans:</strong> nefret söylemi, taciz, çocuk istismarı içeriği, pornografi, tehdit/şiddet, ayrımcılık, yasa dışı içerikler vb.</li>
+              <li><strong>Raporlama & engelleme:</strong> kullanıcılar uygulama içinden raporlayabilir ve engelleyebilir.</li>
+              <li><strong>Moderasyon:</strong> çoğunlukla <strong>24 saat</strong> içinde.</li>
+              <li>Kuralları ihlal eden içerikler kaldırılabilir; hesaplar kısıtlanabilir veya kapatılabilir.</li>
+            </span>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">6) Account Deletion</span>
+            <span data-lang="tr">6) Hesap Silme</span>
+          </h3>
+          <p class="lang-block">
+            <span data-lang="en">You can delete your account and associated data from in-app settings. You can also request deletion by emailing us.</span>
+            <span data-lang="tr">Hesabınızı ve ilişkili verilerinizi uygulama ayarlarından silebilirsiniz. Dilerseniz e-posta ile de silme talebi iletebilirsiniz.</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">7) Children’s Privacy</span>
+            <span data-lang="tr">7) Çocukların Gizliliği</span>
+          </h3>
+          <p class="lang-block">
+            <span data-lang="en">WishLink is rated <strong>4+</strong>. We do not knowingly collect personal information from children. If you believe your child provided personal information, contact us.</span>
+            <span data-lang="tr">WishLink, App Store’da <strong>4+</strong> yaş derecelendirmesine sahiptir. Çocuklardan bilerek kişisel veri toplamayı amaçlamayız. Gerekirse bizimle iletişime geçin.</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="lang-block">
+            <span data-lang="en">8) Changes to This Policy</span>
+            <span data-lang="tr">8) Değişiklikler</span>
+          </h3>
+          <p class="lang-block">
+            <span data-lang="en">We may update this policy from time to time. Please review this page periodically for changes.</span>
+            <span data-lang="tr">Bu politika zaman zaman güncellenebilir. Güncellemeler için bu sayfayı periyodik olarak kontrol ediniz.</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Back -->
+    <section class="section" style="padding-top:12px;">
+      <div class="card" style="text-align:center;padding:22px;">
+        <h3 class="lang-block" style="font-size:18px;margin:0 0 8px;">
+          <span data-lang="en">Back to WishLink</span>
+          <span data-lang="tr">WishLink’e Dön</span>
+        </h3>
+
+        <p class="lang-block" style="margin:0 0 14px;color:var(--muted);">
+          <span data-lang="en">Return to the main page.</span>
+          <span data-lang="tr">Ana sayfaya dön.</span>
+        </p>
+
+        <a class="primary-btn" href="index.html">
+          <span data-lang="en">Go to Home</span>
+          <span data-lang="tr">Ana Sayfa</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2025 WishLink. All rights reserved.</footer>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = "wishlink_lang";
+      const html = document.documentElement;
+
+      const btnEn = document.getElementById("btn-en");
+      const btnTr = document.getElementById("btn-tr");
+
+      function setActive(lang){
+        const isEn = lang === "en";
+        if (btnEn) btnEn.classList.toggle("active", isEn);
+        if (btnTr) btnTr.classList.toggle("active", !isEn);
+        if (btnEn) btnEn.setAttribute("aria-selected", isEn ? "true" : "false");
+        if (btnTr) btnTr.setAttribute("aria-selected", !isEn ? "true" : "false");
+      }
+
+      function setLang(lang){
+        if (lang !== "en" && lang !== "tr") lang = "tr";
+        html.setAttribute("data-ui-lang", lang);
+        html.setAttribute("lang", lang);
+        setActive(lang);
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch(e) {}
+      }
+
+      // initial: saved -> browser -> default tr
+      let initial = "tr";
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === "en" || saved === "tr") initial = saved;
+        else {
+          const nav = (navigator.language || "").toLowerCase();
+          if (nav.startsWith("en")) initial = "en";
+          if (nav.startsWith("tr")) initial = "tr";
+        }
+      } catch(e) {}
+
+      setLang(initial);
+
+      document.querySelectorAll("[data-set-lang]").forEach((b) => {
+        b.addEventListener("click", () => setLang(b.getAttribute("data-set-lang")));
+      });
+    })();
+  </script>
+
+</body>
+</html>
